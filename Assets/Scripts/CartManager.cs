@@ -9,7 +9,7 @@ public class CartManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "new_items")
+        if(other.gameObject.tag == "Item")
         {
             balanceManager.Add(100);
         }
@@ -17,7 +17,7 @@ public class CartManager : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "new_items")
+        if (other.gameObject.tag == "Item")
         {
             balanceManager.Remove(100);
         }
