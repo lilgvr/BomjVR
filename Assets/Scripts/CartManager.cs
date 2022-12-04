@@ -9,17 +9,15 @@ public class CartManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Item")
-        {
-            balanceManager.Add(100);
+        switch (other.gameObject.tag) {
+            case "jar":
+                balanceManager.Add(50);
+                break;
+            case "bottle":
+                balanceManager.Add(100);
+                break;
         }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Item")
-        {
-            balanceManager.Remove(100);
-        }
+        Destroy(other.gameObject);
     }
 }

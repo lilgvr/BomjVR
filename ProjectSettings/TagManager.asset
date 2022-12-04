@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Cart
-  - Item
+  - bottle
+  - jar
   layers:
   - Default
   - TransparentFX

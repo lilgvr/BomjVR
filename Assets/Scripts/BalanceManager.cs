@@ -8,16 +8,9 @@ public class BalanceManager : MonoBehaviour
     public int balanceValue { get; set; }
     public TextMeshPro balanceText;
 
-    // Start is called before the first frame update
     void Start()
     {
         balanceText.text = balanceValue.ToString();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void Add(int newValue)
@@ -31,10 +24,12 @@ public class BalanceManager : MonoBehaviour
         if (balanceValue - newValue < 0)
         {
             balanceValue = 0;
-        } else
+        }
+        else
         {
             balanceValue -= newValue;
         }
+
         balanceText.text = balanceValue.ToString();
     }
 }
